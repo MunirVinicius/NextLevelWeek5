@@ -1,21 +1,17 @@
-import express from "express"
-const app = express ()
+import express from "express";
 
-app.get('/',(req,res)=>{
-    return res.send("Hello Stranger")
-})
+import {routes} from "./routes";
 
-app.post('/',(req,res)=>{
-    return res.json({message:'Usuario Salvo Com Sucesso'})
-})
+import './database';  
 
+//routes
 
+const app = express ();
 
+app.use(express.json());
+app.use(routes);
 
-
-
-
-
+//routes
 
 app.listen(3000, ()=>{
     console.log("Server is running on port 3000")
