@@ -1,5 +1,6 @@
 import {http} from "./http";
 import "./websocket/client";
+import "./websocket/admin"
 
 //server up
 http.listen(3000, ()=>{
